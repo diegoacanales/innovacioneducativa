@@ -94,6 +94,59 @@
       display: inline-block;
     }
 
+    /* ── Slides banner ──────────────────────────── */
+    .slides-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      background: var(--tecteal);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .slides-info {
+      display: flex;
+      flex-direction: column;
+      gap: .2rem;
+    }
+
+    .slides-label {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--tecgold);
+    }
+
+    .slides-name {
+      font-size: .95rem;
+      font-weight: 500;
+    }
+
+    .btn-slides {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      background: var(--tecgold);
+      color: var(--white);
+      font-size: .85rem;
+      font-weight: 600;
+      padding: .5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .btn-slides:hover { opacity: .88; }
+
+    @media (max-width: 480px) {
+      .slides-banner { flex-direction: column; align-items: flex-start; }
+    }
+
     /* ── Plantilla cards ─────────────────────────── */
     .cards-grid {
       display: grid;
@@ -393,6 +446,18 @@
   <!-- ── Section 1: Materiales ── -->
   <section id="materiales">
     <h2 class="section-title">Materiales del curso</h2>
+
+    <div class="slides-banner">
+      <div class="slides-info">
+        <span class="slides-label">Slides</span>
+        <span class="slides-name">Día 1: Necesidad educativa y diseño de la intervención</span>
+      </div>
+      <a class="btn-slides" href="slides_dia1.pdf" target="_blank">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 3v13m0 0-4-4m4 4 4-4M3 21h18"/></svg>
+        Descargar PDF
+      </a>
+    </div>
+
     <div class="cards-grid">
 
       <div class="card">
