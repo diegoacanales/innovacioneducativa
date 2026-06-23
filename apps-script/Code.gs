@@ -82,7 +82,7 @@ function doPost(e) {
     MailApp.sendEmail({
       to: correo,
       subject: 'CADi: evidencias recibidas',
-      body: 'Hola ' + nombre + ',\n\nRecibimos tus evidencias correctamente (' + savedCount + ' archivo(s)).\n\nFecha: ' + new Date().toLocaleString('es-MX') + '\n\nSi tienes dudas, escríbenos a diego.canales@tec.mx\n\nEquipo CADi'
+      body: 'Hola ' + nombre + ',\n\nRecibimos tus evidencias correctamente (' + savedCount + ' archivo(s)).\n\nFecha: ' + new Date().toLocaleString('es-MX') + '\n\nSi tienes dudas, escríbeme a diego.canales@tec.mx\n\nDiego Canales'
     });
 
     // Notify facilitator
