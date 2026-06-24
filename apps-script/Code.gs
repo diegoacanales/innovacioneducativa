@@ -78,16 +78,9 @@ function doPost(e) {
     // Log the submission for auditing purposes
     logSubmission(nombre, correo, savedCount, subfolder.getUrl());
 
-    // Notify participant
-    MailApp.sendEmail({
-      to: 'no.diego1234567@gmail.com',
-      subject: 'CADi: evidencias recibidas',
-      body: 'Hola ' + nombre + ',\n\nRecibimos tus evidencias correctamente (' + savedCount + ' archivo(s)).\n\nFecha: ' + new Date().toLocaleString('es-MX') + '\n\nSi tienes dudas, escríbeme a diego.canales@tec.mx\n\nDiego Canales'
-    });
-
     // Notify facilitator
     MailApp.sendEmail({
-      to: 'diego.canales@tec.mx',
+      to: 'no.diego1234567@gmail.com',
       subject: 'CADi: nueva entrega de ' + nombre,
       body: 'Nombre: ' + nombre + '\nCorreo: ' + correo + '\nArchivos: ' + savedCount + '\nCarpeta: ' + subfolder.getUrl() + '\nFecha: ' + new Date().toLocaleString('es-MX')
     });
